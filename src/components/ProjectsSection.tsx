@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { Github } from "lucide-react";
+import { Github, Terminal } from "lucide-react";
 import { GlassCard } from "./ui/glass-card";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
@@ -17,17 +17,20 @@ export default function ProjectsSection() {
     <section id="projects" className="py-12 relative">
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
-          <h2 className="text-2xl font-bold mb-8 text-center md:text-left">
-            🚀 Projects
-          </h2>
+          <div className="flex items-center justify-center md:justify-start gap-3 mb-8">
+            <Terminal className="h-6 w-6 text-green-500" />
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-green-500 to-green-300 bg-clip-text text-transparent">
+              Projects
+            </h2>
+          </div>
         </MotionWrapper>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <MotionWrapper key={project.title} delay={index * 0.2}>
-              <GlassCard className="group overflow-hidden dark:border-purple-500/10 h-full flex flex-col">
-                <CardHeader className="bg-gradient-to-r from-purple-500/5 to-pink-500/5">
-                  <CardTitle className="text-center md:text-left group-hover:text-purple-500 transition-colors duration-300">
+              <GlassCard className="group overflow-hidden dark:border-green-500/20 hover:border-green-500/40 transition-colors h-full flex flex-col backdrop-blur-sm bg-black/40">
+                <CardHeader className="bg-gradient-to-r from-green-500/5 to-green-300/5">
+                  <CardTitle className="text-center md:text-left group-hover:text-green-400 transition-colors duration-300">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
@@ -47,12 +50,12 @@ export default function ProjectsSection() {
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter className="flex justify-center md:justify-start items-center border-t border-border/30 bg-gradient-to-r from-purple-500/5 to-pink-500/5">
+                <CardFooter className="flex justify-center md:justify-start items-center border-t border-border/30 bg-gradient-to-r from-green-500/5 to-green-300/5">
                   <motion.a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-sm text-muted-foreground hover:text-purple-500 transition-colors group/link pt-8"
+                    className="flex items-center text-sm text-muted-foreground hover:text-green-400 transition-colors group/link pt-8"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

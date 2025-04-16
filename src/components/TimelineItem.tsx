@@ -29,7 +29,7 @@ export default function TimelineItem({
     >
       <div className="flex flex-col items-center">
         <motion.div
-          className="flex h-[18px] w-[18px] rounded-full border border-purple-500/50 bg-background dark:bg-muted z-10"
+          className="flex h-[18px] w-[18px] rounded-full border border-green-500/50 bg-background dark:bg-muted z-10"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{
@@ -42,7 +42,7 @@ export default function TimelineItem({
         />
         {!isLast && (
           <motion.div
-            className="w-px grow bg-gradient-to-b from-purple-500/50 to-pink-500/30 dark:from-purple-500/30 dark:to-pink-500/10"
+            className="w-px grow bg-gradient-to-b from-green-500/50 to-green-300/30 dark:from-green-500/30 dark:to-green-300/10"
             initial={{ height: 0 }}
             whileInView={{ height: "100%" }}
             transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
@@ -58,7 +58,7 @@ export default function TimelineItem({
           transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
           viewport={{ once: true, margin: "-50px" }}
         >
-          <h3 className="font-medium">{title}</h3>
+          <h3 className="font-medium text-green-400">{title}</h3>
           <p className="text-sm text-muted-foreground">{subtitle}</p>
           <p className="text-xs text-muted-foreground/70 mb-2">{date}</p>
         </motion.div>

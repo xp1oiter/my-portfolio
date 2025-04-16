@@ -2,11 +2,13 @@
 import Layout from "@/layouts/Layout.astro";
 import GlassHeader from "@/components/GlassHeader";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import AwardsSection from "@/components/AwardsSection";
 import EducationSection from "@/components/EducationSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 ---
 
@@ -19,6 +21,7 @@ import Footer from "@/components/Footer";
     <ProjectsSection client:only="react" />
     <AwardsSection client:only="react" />
     <EducationSection client:only="react" />
+    <ContactSection client:only="react" />
   </main>
   <Footer client:only="react" />
 </Layout>
